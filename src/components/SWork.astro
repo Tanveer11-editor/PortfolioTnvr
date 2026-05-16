@@ -3,7 +3,7 @@ import AWork from './AWork.astro'
 import dummyVideo from '/src/assets/works/Dummy.mp4'
 
 const videos = import.meta.glob('/src/assets/works/*.mp4', {
-  eager: true
+  eager: true,
 })
 
 // Yeah, this should probably be in a CMS or content file.
@@ -15,45 +15,45 @@ const info = {
     site: 'https://codepen.io/wodniack',
   },
   Dummy1: {
-    title: 'Dummy Project 1',
-    site: 'https://wodniack.dev',
+    title: 'Result Analysis',
+    site: 'https://github.com/Tanveer11-editor/cttewc-insight',
   },
   Dummy2: {
-    title: 'Dummy Project 2',
-    site: 'https://wodniack.dev',
+    title: 'AI Resume shortlister',
+    site: 'https://github.com/Tanveer11-editor/AI-Resume-Shorlister',
   },
   Dummy3: {
-    title: 'Dummy Project 3',
-    site: 'https://wodniack.dev',
+    title: 'ERP Pro',
+    site: 'https://github.com/Tanveer11-editor/Erp-pro',
   },
   Dummy4: {
-    title: 'Dummy Project 4',
-    site: 'https://wodniack.dev',
+    title: 'Gojan Vibes',
+    site: 'https://www.instagram.com/gojan_vibes/',
   },
   Dummy5: {
-    title: 'Dummy Project 5',
-    site: 'https://wodniack.dev',
+    title: 'Story Seed Platform',
+    site: 'https://storyseed.in',
   },
   Dummy6: {
-    title: 'Dummy Project 6',
-    site: 'https://wodniack.dev',
+    title: 'Music Generation LSTM',
+    site: 'https://github.com/Tanveer11-editor/Music-Generation-LSTM',
   },
   Dummy7: {
-    title: 'Dummy Project 7',
-    site: 'https://wodniack.dev',
+    title: 'Arteum',
+    site: 'https://github.com/Tanveer11-editor/Arteum-',
   },
   Dummy8: {
-    title: 'Dummy Project 8',
-    site: 'https://wodniack.dev',
+    title: 'Assesment Uni',
+    site: 'https://github.com/Tanveer11-editor/Assessment-Uni',
   },
   Dummy9: {
-    title: 'Dummy Project 9',
-    site: 'https://wodniack.dev',
+    title: 'Deepfake Voice Detector',
+    site: 'https://github.com/Tanveer11-editor/Deepfake-voice-detecter',
   },
   Dummy10: {
-    title: 'Dummy Project 10',
-    site: 'https://wodniack.dev',
-  }
+    title: 'LMS APP',
+    site: 'https://github.com/Tanveer11-editor/Gojan-LMS',
+  },
 }
 
 let projects = []
@@ -95,7 +95,7 @@ for (let i = 1; i <= 14; i++) {
     projects.push({
       caption: `${project.title} - Video ${j + 1}`,
       site: project.site,
-      src: dummyVideo
+      src: dummyVideo,
     })
   }
 }
@@ -360,7 +360,7 @@ while (i < projects.length) {
      */
     setCtxStyle() {
       const color = getComputedStyle(this.el).getPropertyValue(
-        '--color-primary'
+        '--color-primary',
       )
 
       Ticker.nextTick(() => {
@@ -540,12 +540,14 @@ while (i < projects.length) {
           el.style.top = ghost.y + 'px'
           el.style.left = ghost.x + 'px'
 
-          el.style.zIndex = String(j !== 1 && j !== 2 && (j + letters.length + i) % 5 === 0 ? 3 : 1)
+          el.style.zIndex = String(
+            j !== 1 && j !== 2 && (j + letters.length + i) % 5 === 0 ? 3 : 1,
+          )
 
           el.style.setProperty('--ix', String(ghost.i))
           el.style.setProperty(
             '--iy',
-            String(((j + 1) / (letters.length + 1) - 0.5) * 2)
+            String(((j + 1) / (letters.length + 1) - 0.5) * 2),
           )
 
           el.style.setProperty('--ap', String(ghost.ap))
@@ -568,7 +570,7 @@ while (i < projects.length) {
         el.style.setProperty('--size', String(0.5 + Math.random() * 0.5))
         el.style.setProperty(
           '--y',
-          String((0.5 + Math.random() * 0.5) * (i % 2 ? -1 : 1))
+          String((0.5 + Math.random() * 0.5) * (i % 2 ? -1 : 1)),
         )
       })
     }
@@ -609,7 +611,7 @@ while (i < projects.length) {
           duration: 0.75,
           ease: 'power4.in',
         },
-        0
+        0,
       )
 
       tl.fromTo(
@@ -622,7 +624,7 @@ while (i < projects.length) {
           duration: 0.75,
           ease: 'power3.in',
         },
-        0
+        0,
       )
 
       tl.fromTo(
@@ -635,7 +637,7 @@ while (i < projects.length) {
           duration: 0.75,
           ease: 'power3.in',
         },
-        0
+        0,
       )
 
       tl.fromTo(
@@ -648,7 +650,7 @@ while (i < projects.length) {
           duration: 1,
           ease: 'power4.inOut',
         },
-        0
+        0,
       )
 
       tl.fromTo(
@@ -661,7 +663,7 @@ while (i < projects.length) {
           duration: 0.75,
           ease: 'power4.in',
         },
-        0
+        0,
       )
 
       tl.fromTo(
@@ -678,7 +680,7 @@ while (i < projects.length) {
           ease: 'slow(0.15, 0.6)',
           stagger: 0.25,
         },
-        0.75
+        0.75,
       )
 
       tl.fromTo(
@@ -691,7 +693,7 @@ while (i < projects.length) {
           duration: tl.totalDuration(),
           ease: 'power1.out',
         },
-        0.75
+        0.75,
       )
 
       tl.fromTo(
@@ -705,7 +707,7 @@ while (i < projects.length) {
           ease: 'power4.inOut',
           immediateRender: false,
         },
-        '-=1'
+        '-=1',
       )
 
       tl.fromTo(
@@ -719,7 +721,7 @@ while (i < projects.length) {
           ease: 'power4.inOut',
           immediateRender: false,
         },
-        '-=1'
+        '-=1',
       )
 
       tl.fromTo(
@@ -733,7 +735,7 @@ while (i < projects.length) {
           ease: 'power3.inOut',
           immediateRender: false,
         },
-        '-=1'
+        '-=1',
       )
 
       tl.fromTo(
@@ -747,7 +749,7 @@ while (i < projects.length) {
           ease: 'power3.inOut',
           immediateRender: false,
         },
-        '-=1'
+        '-=1',
       )
 
       tl.fromTo(
@@ -760,7 +762,7 @@ while (i < projects.length) {
           duration: 1,
           ease: 'power4.inOut',
         },
-        '-=1'
+        '-=1',
       )
     }
 
@@ -769,7 +771,7 @@ while (i < projects.length) {
      */
     loadNextVideo() {
       const video = Array.from(this.videos).find(
-        (video) => !video.classList.contains('is-loaded')
+        (video) => !video.classList.contains('is-loaded'),
       )
 
       if (video) {
@@ -781,7 +783,7 @@ while (i < projects.length) {
             () => {
               this.videoLoaded(video)
             },
-            { once: true }
+            { once: true },
           )
 
           video.setAttribute('src', video.getAttribute('data-src'))
@@ -910,20 +912,20 @@ while (i < projects.length) {
       this.scrollProgress =
         Math.max(
           Math.min(1, ScrollTrigger.positionInViewport(this.el, 'top')),
-          0
+          0,
         ) *
           -1 +
         (1 -
           Math.max(
             Math.min(1, ScrollTrigger.positionInViewport(this.el, 'bottom')),
-            0
+            0,
           ))
       this.smoothScrollProgress +=
         (this.scrollProgress - this.smoothScrollProgress) * 0.1
 
       this.el.style.setProperty(
         '--scroll-progress',
-        String(this.scrollProgress)
+        String(this.scrollProgress),
       )
 
       // Movement
@@ -1142,10 +1144,8 @@ while (i < projects.length) {
 
           color: color(shadow);
 
-          opacity: min(calc( var(--state) * 2 ), 1);
-          transform: scale(
-              1.05, 1.02
-            )
+          opacity: min(calc(var(--state) * 2), 1);
+          transform: scale(1.05, 1.02)
             translate3d(
               calc(var(--head) * 0.1rem * var(--state) * var(--state)),
               0,
